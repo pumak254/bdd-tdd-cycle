@@ -11,13 +11,13 @@ class CreateMovies < ActiveRecord::Migration
       t.timestamps
     end
     
-    add_column(:movies, :director)
+    #add_column(:movies, :director, :null => true)
     
     
   end
 
   def down
-    drop_column :movies, :director
+    #drop_column :movies, :director
     drop_table :movies
   end
 end
