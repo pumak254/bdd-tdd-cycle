@@ -27,7 +27,11 @@ module NavigationHelpers
       
     when /^the details page for "(.*)"$/
       movie_path Movie.find_by_title($1).id
-
+      
+    when /^"Find Movies With Same Director"$/
+      director_movie_path 
+    when /^the Similar Movies page for "(.*)"$/
+      director_movie_path Movie.find_by_title($1).id
     else
       begin
         page_name =~ /^the (.*) page$/

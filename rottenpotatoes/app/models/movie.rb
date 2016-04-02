@@ -5,5 +5,10 @@ class Movie < ActiveRecord::Base
   def self.all_ratings
     %w(G PG PG-13 NC-17 R)
   end
+  
+  def self.similar_movies movie_id
+    subject = Movie.find_by_id(movie_id)
+    Movie.where(:director => subject.director)
+  end
 end
 
