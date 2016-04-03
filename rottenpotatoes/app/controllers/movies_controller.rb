@@ -69,7 +69,8 @@ class MoviesController < ApplicationController
     params[:alike] = Movie.similar_movies params[:id]
     if params[:alike].size == 1
       redirect_to movies_path
-      flash[:notice] = "'' has no info"
+      subject = Movie.movie_name params[:id]
+      flash[:notice] = "'#{subject}' has no director info"
     end
   end
 

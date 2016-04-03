@@ -10,5 +10,10 @@ class Movie < ActiveRecord::Base
     subject = Movie.find_by_id(movie_id)
     Movie.where(:director => subject.director)
   end
+  
+  def self.movie_name id
+    subject = Movie.find_by_id(id)
+    subject.title
+  end
 end
 

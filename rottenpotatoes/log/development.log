@@ -4512,3 +4512,67 @@ Served asset /jquery_ujs.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 209.189.254.6 at 2016-04-02 23:31:43 +0000
 Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/movies/14" for 209.189.254.6 at 2016-04-03 00:19:18 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "14"]]
+  Rendered movies/show.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 32.5ms (Views: 14.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 209.189.254.6 at 2016-04-03 00:19:19 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:19 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:19 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:19 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/movies/14/director" for 209.189.254.6 at 2016-04-03 00:19:22 +0000
+Processing by MoviesController#director as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 14 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "movies" WHERE "movies"."director" = 'Shaki'[0m
+Redirected to https://csce-431-pumak254.c9users.io/movies
+  [1m[35mCACHE (0.0ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = 14 LIMIT 1
+Completed 302 Found in 6.4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/movies" for 209.189.254.6 at 2016-04-03 00:19:22 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://csce-431-pumak254.c9users.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1
+Completed 302 Found in 1.5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1" for 209.189.254.6 at 2016-04-03 00:19:22 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 27.7ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:23 +0000
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:23 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 209.189.254.6 at 2016-04-03 00:19:23 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 209.189.254.6 at 2016-04-03 00:19:23 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
